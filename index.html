@@ -25,6 +25,56 @@
 
 <body>
 
+    <div class="intro">
+        <div class="eyebrow">Menos edição, mais tempo</div>
+        <h1>Primprim.</h1>
+        <p>Escolha as datas e imprima a estrutura em branco pronta para preenchimento.</p>
+    </div>
+    <main>
+        <aside class="panel">
+            <h2><span class="step">1</span>Defina o período</h2>
+            <div class="tabs" role="group" aria-label="Tipo de período"><button class="active" data-mode="month"
+                    aria-pressed="true">Mês completo</button><button data-mode="range"
+                    aria-pressed="false">Intervalo</button><button data-mode="custom" aria-pressed="false">Datas
+                    avulsas</button></div>
+            <div id="monthBox"><label for="month">Mês e ano</label><input id="month" type="month" value="2026-11"></div>
+            <div id="rangeBox" hidden>
+                <div class="row">
+                    <div><label for="start">Data inicial</label><input id="start" type="date" value="2026-11-01"></div>
+                    <div><label for="end">Data final</label><input id="end" type="date" value="2026-11-30"></div>
+                </div>
+            </div>
+            <div id="customBox" hidden><label for="calendarMonth">Selecione os dias no calendário</label><input
+                    id="calendarMonth" type="month" value="2026-11">
+                <div id="calendar" class="calendar"></div><button class="small-btn" id="clear">Limpar seleção</button>
+                <p id="selectedCount" style="font-size:11px"></p>
+            </div><label for="weekends">Sábados e domingos</label><select id="weekends">
+                <option value="highlight">Incluir e destacar</option>
+                <option value="include">Incluir sem destaque</option>
+                <option value="exclude">Não incluir</option>
+            </select><label class="check"><input type="checkbox" id="dayNames" checked>Mostrar o dia da semana</label>
+            <div class="divider"></div>
+            <h2><span class="step">2</span>Personalize a folha</h2><label for="name">Nome do motorista <span
+                    style="font-weight:normal;color:#8a958c">· opcional</span></label><input id="name" maxlength="70"
+                placeholder="Deixe em branco para preencher à mão"><label for="hours">Carga horária diária</label><input
+                id="hours" type="time" value="08:00"><label class="check"><input id="signature" type="checkbox"
+                    checked>Incluir campos de assinatura</label>
+            <div class="divider"></div>
+            <div class="error" id="error" role="status"></div><button class="primary" id="print">Imprimir</button>
+            <p class="hint">No diálogo de impressão, escolha “Salvar como PDF”.<br>Use A4. Em “Mais configurações”,
+                desmarque “Cabeçalhos e rodapés” para remover o endereço e o título do site. A data e a hora serão
+                incluídas
+                na folha.</p>
+        </aside>
+        <section>
+            <div class="preview-head">
+                <h2>Prévia da folha</h2><span class="badge" id="summary"></span>
+            </div>
+            <div class="paper-wrap" id="preview" aria-live="polite"></div>
+            <div class="foot">Pronta para papel A4 · Horários em branco · Sem cadastro</div>
+        </section>
+    </main>
+
 </body>
 
 </html>
