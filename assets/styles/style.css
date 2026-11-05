@@ -1,0 +1,476 @@
+:root {
+    font-family: Inter, Arial, sans-serif;
+    color: #203833;
+    background: #f3f5f2;
+    font-synthesis: none
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0
+}
+
+
+
+.intro {
+    padding: 32px 4vw 22px
+}
+
+.eyebrow {
+    color: #517565;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold
+}
+
+h1 {
+    font-size: 30px;
+    letter-spacing: -1px;
+    margin: 10px 0
+}
+
+p {
+    color: #6b7c73;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 8px 0
+}
+
+main {
+    display: grid;
+    grid-template-columns: 340px minmax(0, 1fr);
+    gap: 28px;
+    padding: 0 4vw 40px;
+    align-items: start
+}
+
+.panel {
+    background: white;
+    border: 1px solid #dce3dc;
+    border-radius: 14px;
+    padding: 24px
+}
+
+h2 {
+    font-size: 16px;
+    margin: 0 0 20px
+}
+
+.step {
+    display: inline-grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #eaf1ec;
+    color: #32614d;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    font-size: 12px
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 18px 0 7px
+}
+
+input,
+select,
+button {
+    font: inherit
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d7dfd8;
+    border-radius: 7px;
+    background: #fff;
+    color: #203833
+}
+
+input:focus,
+select:focus,
+button:focus-visible {
+    outline: 2px solid #43866b;
+    outline-offset: 2px
+}
+
+.tabs {
+    display: flex;
+    background: #f1f4f0;
+    padding: 4px;
+    border-radius: 8px;
+    gap: 3px
+}
+
+.tabs button {
+    flex: 1;
+    border: 0;
+    background: none;
+    padding: 10px 2px;
+    font-size: 12px;
+    color: #67786e;
+    cursor: pointer;
+    border-radius: 5px
+}
+
+.tabs button.active {
+    background: white;
+    color: #215e4d;
+    box-shadow: 0 1px 4px #0001;
+    font-weight: bold
+}
+
+.row {
+    display: flex;
+    gap: 10px
+}
+
+.row>div {
+    flex: 1;
+    min-width: 0
+}
+
+.check {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: 400;
+    line-height: 1.4
+}
+
+.check input {
+    width: 16px;
+    height: 16px;
+    accent-color: #215e4d
+}
+
+.divider {
+    border-top: 1px solid #e6ebe5;
+    margin: 24px 0
+}
+
+.primary {
+    background: #215e4d;
+    border: 0;
+    color: white;
+    border-radius: 8px;
+    padding: 14px 18px;
+    width: 100%;
+    font-weight: 600;
+    cursor: pointer
+}
+
+.primary:disabled {
+    opacity: .45;
+    cursor: not-allowed
+}
+
+.hint {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 9px
+}
+
+.preview-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 15px
+}
+
+.preview-head h2 {
+    margin: 0
+}
+
+.badge {
+    font-size: 11px;
+    color: #52705f;
+    background: #e6eee7;
+    padding: 7px 10px;
+    border-radius: 20px
+}
+
+.paper-wrap {
+    overflow: auto;
+    padding: 3px 4px 20px
+}
+
+.paper {
+    width: 100%;
+    min-width: 580px;
+    background: #fff;
+    padding: 32px;
+    color: #111;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px #244b3210;
+    border: 1px solid #e0e4dc;
+    aspect-ratio: 210/297
+}
+
+.paper h3 {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin: 0 0 8px
+}
+
+.period {
+    text-align: center;
+    font-size: 12px;
+    margin: 0 0 22px;
+    color: #333
+}
+
+.identity {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #444;
+    border-bottom: 0;
+    padding: 10px 8px;
+    font-size: 11px;
+    gap: 15px
+}
+
+.name {
+    flex: 1
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    font-size: 10px
+}
+
+th,
+td {
+    border: 1px solid #555;
+    text-align: center
+}
+
+th {
+    height: 34px;
+    font-weight: 600;
+    background: #f0f2ef;
+    padding: 3px
+}
+
+td {
+    height: 23px
+}
+
+th:first-child {
+    width: 23%
+}
+
+td:first-child {
+    font-size: 10px;
+    font-weight: 600
+}
+
+.weekend {
+    background: #f0f2ef
+}
+
+.weekday {
+    font-weight: normal;
+    font-size: 9px;
+    color: #555;
+    margin-left: 4px
+}
+
+.signatures {
+    display: flex;
+    gap: 40px;
+    margin: 40px 16px 0;
+    text-align: center;
+    font-size: 10px
+}
+
+.signatures div {
+    flex: 1;
+    border-top: 1px solid #555;
+    padding-top: 7px
+}
+
+.print-stamp {
+    font-size: 9px;
+    color: #555;
+    margin-bottom: 8px
+}
+
+.page-no {
+    text-align: right;
+    font-size: 9px;
+    color: #777;
+    margin-top: 20px
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-top: 12px
+}
+
+.calendar span {
+    text-align: center;
+    font-size: 10px;
+    padding: 5px 0;
+    color: #7d8b80
+}
+
+.calendar button {
+    border: 0;
+    border-radius: 5px;
+    background: #f0f4ef;
+    aspect-ratio: 1;
+    cursor: pointer;
+    font-size: 12px
+}
+
+.calendar button.selected {
+    background: #215e4d;
+    color: #fff
+}
+
+.small-btn {
+    background: transparent;
+    border: 0;
+    color: #215e4d;
+    font-size: 11px;
+    cursor: pointer;
+    padding: 10px 0
+}
+
+.error {
+    color: #ac3f31;
+    font-size: 12px;
+    min-height: 16px
+}
+
+.empty {
+    text-align: center;
+    padding: 90px 20px;
+    color: #6b7c73
+}
+
+.foot {
+    font-size: 12px;
+    color: #748176;
+    text-align: center
+}
+
+[hidden] {
+    display: none !important
+}
+
+@media(max-width:850px) {
+    main {
+        grid-template-columns: 1fr
+    }
+
+    .intro {
+        padding-top: 24px
+    }
+
+    h1 {
+        font-size: 25px
+    }
+
+    .panel {
+        padding: 20px
+    }
+
+    .paper {
+        padding: 24px
+    }
+}
+
+@page {
+    size: A4 portrait;
+    margin: 12mm
+}
+
+@media print {
+
+    html,
+    body {
+        background: white !important
+    }
+
+    .intro,
+    .panel,
+    .preview-head,
+    .foot {
+        display: none !important
+    }
+
+    main {
+        display: block;
+        padding: 0;
+        margin: 0
+    }
+
+    .paper-wrap {
+        padding: 0;
+        overflow: visible
+    }
+
+    .paper {
+        width: 100%;
+        min-width: 0;
+        height: 270mm;
+        aspect-ratio: auto;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+        break-after: page;
+        page-break-after: always
+    }
+
+    .paper:last-child {
+        break-after: auto;
+        page-break-after: auto
+    }
+
+    th,
+    td {
+        height: 6.5mm
+    }
+
+    th {
+        height: 10mm
+    }
+
+    .paper h3 {
+        margin-top: 2mm
+    }
+
+    .weekend,
+    th {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact
+    }
+
+    .identity {
+        padding: 3mm 2mm
+    }
+
+    .signatures {
+        margin-top: 12mm
+    }
+
+    .page-no {
+        margin-top: 5mm
+    }
+}
